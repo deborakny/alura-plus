@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krona+One&family=Montserrat+Alternates:wght@100&family=Montserrat:wght@400;600&display=swap');
+
 :root {
     --cor-principal: #FFFFFF;
     --cor-secundaria: #C0C0C0;
     --cor-botao-primaria: #167DF7;
     --cor-fundo: #00030C;
+    --fonte-principal: 'Inter';
 }
 
 * {
@@ -12,15 +15,42 @@
 
 body {
     background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-principal);
 }
 
-.cabecalho {
+.conteudo {
+    display: grid;
+    grid-template-columns: 50% 50%;
     background-image: url("./assets/Background.png");
     height: 100vh;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.cabecalho__titulo {
+.conteudo__titulo{
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.conteudo__botao {
+    background-color: var(--cor-botao-primaria);
     color: var(--cor-principal);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 1rem;
+    display: block;
+}
+
+.botao--secundario {
+    background-color: transparent;
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+}
+
+.conteudo__aviso {
+    font-size: 0.75rem;
+    color: var(--cor-secundaria);
 }
